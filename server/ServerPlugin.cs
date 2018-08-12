@@ -31,5 +31,4 @@ namespace Server
             return new HelloResponse { Result = $"Hi {request.Name} from server.dll" };
         }
     }
-
 }
