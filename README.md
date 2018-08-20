@@ -63,8 +63,7 @@ public class ServerPlugin : IPlugin
     }
 }
 
-[Route("/hello")]
-[Route("/hello/{Name}")]
+//[Route("/hello/{Name}")] // Handled by /hello/_name.html API page, uncomment to take over
 public class Hello : IReturn<HelloResponse>
 {
     public string Name { get; set; }
@@ -137,4 +136,4 @@ During development Parcel maintains a debug and source-code friendly version of 
 Which will bundle and minify all `.css`, `.js` and `.html` assets and publish to `/app/wwwroot`.
 
 Then to deploy Web Apps you just need to copy the `/app` and `/web` folders to any server with .NET Core 2.1 runtime installed. 
-The [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) docs 
+The [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) docs.
