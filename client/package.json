@@ -6,8 +6,7 @@
     "postinstall": "npm run build && dotnet restore ../server",
     "dev": "node scripts/pre-build.js && parcel watch _layout.html -d ../app/wwwroot",
     "build": "node scripts/pre-build.js && parcel build _layout.html -d ../app/wwwroot",
-    "server": "dotnet ../web/app.dll ../app/web.settings",
-    "build-server": "dotnet build -c Release ../server && node scripts/copy-server.js",
+    "server": "dotnet build -c Release ../server && node scripts/copy-server.js && dotnet ../web/app.dll ../app/web.settings",
     "dtos": "cd src && typescript-ref",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

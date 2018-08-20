@@ -12,8 +12,7 @@ namespace Server
         }
     }
     
-    [Route("/hello")]
-    [Route("/hello/{Name}")]
+    //[Route("/hello/{Name}")] // Handled by /hello/_name.html API page, uncomment to take over
     public class Hello : IReturn<HelloResponse>
     {
         public string Name { get; set; }

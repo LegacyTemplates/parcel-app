@@ -84,15 +84,11 @@ public class MyServices : Service
 }
 ```
 
-If you make any changes to `ServerPlugin.cs` you can run:
-
-    $ npm run build-server
-
-To build the project and copy the resulting `server.dll` to `/app/plugins/serer.dll` which will require restarting the server to load the latest plugin:
+To build the `server.csproj` project and copy the resulting `server.dll` to `/app/plugins/serer.dll` which will require restarting the server to load the latest plugin:
 
     $ npm run server
 
-Which will automatically load any `Plugins`, `Services`, `Filters`, etc and make them available to your Web App. 
+This will automatically load any `Plugins`, `Services`, `Filters`, etc and make them available to your Web App. 
 
 One benefit of creating your APIs with C# ServiceStack Services instead of [API Pages](http://templates.servicestack.net/docs/api-pages) is that you can generate TypeScript DTOs with:
 
@@ -100,10 +96,10 @@ One benefit of creating your APIs with C# ServiceStack Services instead of [API 
 
 Which saves generate DTOs for all your ServiceStack Services in [dtos.ts](https://github.com/NetCoreTemplates/parcel-webapp/blob/master/client/dtos.ts) which can then be accessed in your TypeScript source code.
 
-If preferred you can instead develop Server APIs with API Pages, an example is included in [/client/api/hello.html](https://github.com/NetCoreTemplates/parcel-webapp/blob/master/client/api/hello.html)
+If preferred you can instead develop Server APIs with API Pages, an example is included in [/client/hello/_name.html](https://github.com/NetCoreTemplates/parcel-webapp/blob/master/client/hello/_name.html)
 
 ```html
-{{ { result: `Hi ${name} from /api/hello` } | return }}
+{{ { result: `Hi ${name} from /hello/_name.html` } | return }}
 ```
 
 Which as it uses the same data structure as the `Hello` Service above, can be called with ServiceStack's `JsonServiceClient` and generated TypeScript DTOs.
@@ -122,7 +118,7 @@ document.querySelector("#Name")!.addEventListener("input", async e => {
     const request = new Hello();
     request.name = value;
     const response = await client.get(request);
-    // const response = await client.get<HelloResponse>("/api/hello", request); // call /api/hello instead
+    // const response = await client.get<HelloResponse>(`/hello/${request.name}`); // call /hello/_name.html instead
     result.innerHTML = response.result;
   } else {
     result.innerHTML = "";
@@ -130,7 +126,7 @@ document.querySelector("#Name")!.addEventListener("input", async e => {
 });
 ```
 
-But while your App is running you can instead toggle the uncommented the line and hit `Ctrl+S` to save `index.ts` which Parcel will automatically transpile and publish to `/app/wwwroot` that will be detected by Hot Reload to automatically reload the page with the latest changes. Now typing in the text field will display the response from calling the `/api/hello.html` API instead.
+But while your App is running you can instead toggle the uncommented the line and hit `Ctrl+S` to save `index.ts` which Parcel will automatically transpile and publish to `/app/wwwroot` that will be detected by Hot Reload to automatically reload the page with the latest changes. Now typing in the text field will display the response from calling the `/hello/_name.html` API instead.
 
 ### Deployments
 
