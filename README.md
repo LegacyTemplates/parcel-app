@@ -24,7 +24,7 @@ This template is maintained in the following directory structure:
  - `/server` - Extend your Web App with an optional `server.dll` plugin containing additional Server functionality
  - `/web` - The Web App binaries
 
-Most development will happen within `/client` which is automatically published to `/app` using partial
+Most development will happen within `/client` which is automatically published to `/app` using parcel's CLI that's invoked from the included npm scripts.
 
 ### client
 
