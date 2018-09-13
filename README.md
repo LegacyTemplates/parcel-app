@@ -6,6 +6,7 @@
 
 > Browse [source code](https://github.com/NetCoreTemplates/parcel-webapp), view live demo [parcel-webapp.web-templates.io](http://parcel-webapp.web-templates.io) and install with [dotnet-new](http://docs.servicestack.net/dotnet-new):
 
+    $ dotnet tool install -g web
     $ npm install -g @servicestack/cli
 
     $ dotnet-new parcel-webapp ProjectName
@@ -22,7 +23,6 @@ This template is maintained in the following directory structure:
  - `/app` - Your Web App's published source code and any plugins
  - `/client` - The Parcel managed Client App where client source code is maintained
  - `/server` - Extend your Web App with an optional `server.dll` plugin containing additional Server functionality
- - `/web` - The Web App binaries
 
 Most development will happen within `/client` which is automatically published to `/app` using parcel's CLI that's invoked from the included npm scripts.
 
@@ -135,5 +135,29 @@ During development Parcel maintains a debug and source-code friendly version of 
 
 Which will bundle and minify all `.css`, `.js` and `.html` assets and publish to `/app/wwwroot`.
 
-Then to deploy Web Apps you just need to copy the `/app` and `/web` folders to any server with .NET Core 2.1 runtime installed. 
-The [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) docs.
+Then to deploy Web Apps you just need to copy the `/app` folder to a server that has 
+[.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) and `dotnet tool install -g web` installed which can then be run by running the
+`web` global tool in the `/app` folder or by specifying the full path to the `web` tool and `app.settings`, e.g:
+
+    $ $HOME/.dotnet/tools/web /path/to/app/app.settings         # Linux or macOS
+    $ %USERPROFILE%\.dotnet\tools C:\path\to\app\app.settings   # Windows
+
+Alternatively you can bundle the `web` binaries with your App with:
+
+    $ web publish
+
+Which will copy your `/app` and `web` binaries to the `/publish` folder:
+
+    /publish
+      /app
+      /web
+
+That can then be run by running the `web.dll` directly:
+
+    $ dotnet /path/to/web/web.dll
+
+Which will find your `../app/app.settings` in one of its search paths.
+
+## Learn
+
+See [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) for more info.

@@ -7,9 +7,9 @@
             "label": "build",
             "type": "shell",
             "command": "dotnet",
-            "args": ["web/app.dll", "../app/web.settings"],
+            "args": ["web"],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/app"
             },
             "presentation": {
                 "echo": true,

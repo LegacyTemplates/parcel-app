@@ -1,4 +1,0 @@
-name Parcel Web App
-debug true
-contentRoot ~/../app
-webRoot ~/../app/wwwroot
