@@ -7,9 +7,8 @@
 > Browse [source code](https://github.com/NetCoreTemplates/parcel-webapp), view live demo [parcel-webapp.web-templates.io](http://parcel-webapp.web-templates.io) and install with [dotnet-new](http://docs.servicestack.net/dotnet-new):
 
     $ dotnet tool install -g web
-    $ npm install -g @servicestack/cli
 
-    $ dotnet-new parcel-webapp ProjectName
+    $ web new parcel-webapp ProjectName
 
 ## About
 
@@ -139,8 +138,10 @@ Then to deploy Web Apps you just need to copy the `/app` folder to a server that
 [.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) and `dotnet tool install -g web` installed which can then be run by running the
 `web` global tool in the `/app` folder or by specifying the full path to the `web` tool and `app.settings`, e.g:
 
-    $ $HOME/.dotnet/tools/web /path/to/app/app.settings         # Linux or macOS
-    $ %USERPROFILE%\.dotnet\tools C:\path\to\app\app.settings   # Windows
+    $ $HOME/.dotnet/tools/web /path/to/app/app.settings            # Linux or macOS
+    $ %USERPROFILE%\.dotnet\tools\web C:\path\to\app\app.settings  # Windows
+
+Please see [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) for a detailed guide on deploying to Linux or Docker.
 
 Alternatively you can bundle the `web` binaries with your App with:
 
