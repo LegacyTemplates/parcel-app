@@ -12,8 +12,8 @@
 
 ## About
 
-This project combines the simplicity of developing modern JavaScript Apps with the [parcel template](https://github.com/NetCoreTemplates/parcel) with the simplicity of developing .NET Core Apps with [ServiceStack Templates Web Apps](http://templates.servicestack.net/docs/web-apps) to provide a unified solution for creating rich Apps in a live rapid development workflow without compilation allowing the creation of 
-[pure Cloud Apps](http://templates.servicestack.net/docs/web-apps#pure-cloud-apps) and [simplified deployments](http://templates.servicestack.net/docs/deploying-web-apps).
+This project combines the simplicity of developing modern JavaScript Apps with the [parcel template](https://github.com/NetCoreTemplates/parcel) with the simplicity of developing .NET Core Apps with [ServiceStack Sharp Apps](https://sharpscript.net/docs/sharp-apps) to provide a unified solution for creating rich Apps in a live rapid development workflow without compilation allowing the creation of 
+[pure Cloud Apps](https://sharpscript.net/docs/sharp-apps#pure-cloud-apps) and [simplified deployments](https://sharpscript.net/docs/deploying-sharp-apps).
 
 ## Layout
 
@@ -27,7 +27,7 @@ Most development will happen within `/client` which is automatically published t
 
 ### client
 
-The difference with [templates-webapp](https://github.com/NetCoreTemplates/templates-webapp) is that the client source code is maintained in the `/client` folder and uses [Parcel JS](https://parceljs.org) to automatically bundle and publish your App to `/app/wwwroot` which is updated with live changes during development.
+The difference with [rockwind-webapp](https://github.com/NetCoreTemplates/rockwind-webapp) is that the client source code is maintained in the `/client` folder and uses [Parcel JS](https://parceljs.org) to automatically bundle and publish your App to `/app/wwwroot` which is updated with live changes during development.
 
 The client folder also contains the npm [package.json](https://github.com/NetCoreTemplates/parcel-webapp/blob/master/client/package.json) which contains all npm scripts required during development.
 
@@ -45,12 +45,12 @@ Then to start the ServiceStack Server to host your Web App run:
 
     $ npm run server
 
-Which will host your App at `http://localhost:5000` which in `debug` mode will enable [hot reloading](http://templates.servicestack.net/docs/hot-reloading) 
+Which will host your App at `http://localhost:5000` which in `debug` mode will enable [hot reloading](https://sharpscript.net/docs/hot-reloading) 
 which will automatically reload your web page as it detects any file changes made by parcel.
 
 ### server
 
-To enable even richer functionality, this Web Apps template is also pre-configured with a custom Server project where you can extend your Web App with [Plugins](http://templates.servicestack.net/docs/web-apps#plugins) where all `Plugins`, `Services`, `Filters`, etc are automatically wired and made available to your Web App. 
+To enable even richer functionality, this Web Apps template is also pre-configured with a custom Server project where you can extend your Web App with [Plugins](https://sharpscript.net/docs/sharp-apps#plugins) where all `Plugins`, `Services`, `Filters`, etc are automatically wired and made available to your Web App. 
 
 This template includes a simple [ServerPlugin.cs](https://github.com/NetCoreTemplates/parcel-webapp/blob/master/server/ServerPlugin.cs) which contains an Empty `ServerPlugin` and `Hello` Service:
 
@@ -88,7 +88,7 @@ To build the `server.csproj` project and copy the resulting `server.dll` to `/ap
 
 This will automatically load any `Plugins`, `Services`, `Filters`, etc and make them available to your Web App. 
 
-One benefit of creating your APIs with C# ServiceStack Services instead of [API Pages](http://templates.servicestack.net/docs/api-pages) is that you can generate TypeScript DTOs with:
+One benefit of creating your APIs with C# ServiceStack Services instead of [Sharp APIs](https://sharpscript.net/docs/sharp-apis) is that you can generate TypeScript DTOs with:
 
     $ npm run dtos
 
@@ -141,7 +141,7 @@ Then to deploy Web Apps you just need to copy the `/app` folder to a server that
     $ $HOME/.dotnet/tools/web /path/to/app/app.settings            # Linux or macOS
     $ %USERPROFILE%\.dotnet\tools\web C:\path\to\app\app.settings  # Windows
 
-Please see [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) for a detailed guide on deploying to Linux or Docker.
+Please see [Deploying Web Apps](https://sharpscript.net/docs/deploying-sharp-apps) for a detailed guide on deploying to Linux or Docker.
 
 Alternatively you can bundle the `web` binaries with your App with:
 
@@ -161,4 +161,4 @@ Which will find your `../app/app.settings` in one of its search paths.
 
 ## Learn
 
-See [Deploying Web Apps](http://templates.servicestack.net/docs/deploying-web-apps) for more info.
+See [Deploying Web Apps](https://sharpscript.net/docs/deploying-sharp-apps) for more info.
