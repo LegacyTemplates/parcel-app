@@ -7,16 +7,16 @@
     "dev": "node scripts/pre-build.js && parcel watch _layout.html -d ../app/wwwroot",
     "build": "node scripts/pre-build.js && parcel build _layout.html -d ../app/wwwroot",
     "server": "dotnet build -c Release ../server && node scripts/copy-server.js && web ../app/app.settings",
-    "dtos": "cd src && typescript-ref",
+    "dtos": "typescript-ref",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@servicestack/client": "^1.0.15",
-    "bootstrap": "^4.2.1",
+    "@servicestack/client": "^1.0.20",
+    "bootstrap": "^4.3.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "cssnano": "^4.1.8",
-    "typescript": "^3.2.4"
+    "cssnano": "^4.1.10",
+    "typescript": "^3.4.4"
   }
 }
