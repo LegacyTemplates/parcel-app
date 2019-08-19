@@ -13,10 +13,17 @@
   "dependencies": {
     "@servicestack/client": "^1.0.31",
     "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "typescript": "^3.5.3"
-  }
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  }  
 }
