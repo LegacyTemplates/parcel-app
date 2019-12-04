@@ -1,6 +1,6 @@
 # parcel-webapp
 
-.NET Core 2.1 Templates WebApp with Parcel + TypeScript
+.NET Core 3.1 Templates WebApp with Parcel + TypeScript
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/parcel-webapp.png)](http://parcel-webapp.web-templates.io/)
 
@@ -135,7 +135,7 @@ During development Parcel maintains a debug and source-code friendly version of 
 Which will bundle and minify all `.css`, `.js` and `.html` assets and publish to `/app/wwwroot`.
 
 Then to deploy Web Apps you just need to copy the `/app` folder to a server that has 
-[.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) and `dotnet tool install -g web` installed which can then be run by running the
+[.NET Core 3.1](https://www.microsoft.com/net/download/dotnet-core/2.1) and `dotnet tool install -g web` installed which can then be run by running the
 `web` global tool in the `/app` folder or by specifying the full path to the `web` tool and `app.settings`, e.g:
 
     $ $HOME/.dotnet/tools/web /path/to/app/app.settings            # Linux or macOS
