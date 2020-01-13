@@ -4,7 +4,7 @@
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/parcel-webapp.png)](http://parcel-webapp.web-templates.io/)
 
-> Browse [source code](https://github.com/NetCoreTemplates/parcel-webapp), view live demo [parcel-webapp.web-templates.io](http://parcel-webapp.web-templates.io) and install with [dotnet-new](http://docs.servicestack.net/dotnet-new):
+> Browse [source code](https://github.com/NetCoreTemplates/parcel-webapp), view live demo [parcel-webapp.web-templates.io](http://parcel-webapp.web-templates.io) and install with [dotnet-new](https://docs.servicestack.net/dotnet-new):
 
     $ dotnet tool install -g x
 
