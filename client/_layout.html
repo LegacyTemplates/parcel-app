@@ -10,11 +10,11 @@
 
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/default.css">
-    {{ 'app' | cssIncludes | svgFill('#e7dacb') }}
-    {{ 'svg-icons' | cssIncludes | svgFill('#343a40') }}
+    {{ 'app' |> cssIncludes |> svgFill('#e7dacb') }}
+    {{ 'svg-icons' |> cssIncludes |> svgFill('#343a40') }}
 </head>
 <body>
-    <i hidden>{{ '/js/hot-fileloader.js' | ifDebugIncludeScript }}</i>
+    <i hidden>{{ '/js/hot-fileloader.js' |> ifDebugIncludeScript }}</i>
     <i hidden><a href="_parcel-links.html"></a></i>
 
     <!-- Navigation -->
@@ -29,7 +29,7 @@
                   aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              {{ 'menu' | partial }}
+              {{ 'menu' |> partial }}
         </div>
       </nav>
 

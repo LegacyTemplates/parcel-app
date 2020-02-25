@@ -2,12 +2,12 @@
      '/about':    'About',
      '/services': 'Services',
      '/contact':  'Contact',
-   } | toList | to => links }}
+   } |> toList |> to => links }}
 
 <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
         {{#each links}}
-        <li class="{{ {active: Key.matchesPathInfo()} | htmlClassList }}">
+        <li class="{{ {active: Key.matchesPathInfo()} |> htmlClassList }}">
             <a class="nav-link" href="{{Key}}">{{Value}}</a>
         </li>
         {{/each}}
