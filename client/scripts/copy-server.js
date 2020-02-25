@@ -3,7 +3,7 @@
 var fs = require("fs");
 var path = require("path");
 
-var serverReleaseDir = path.resolve(__dirname, "../../server/bin/Release/netcoreapp3.1/");
+var serverReleaseDir = path.resolve(__dirname, "../../server/bin/Release/netstandard2.0/");
 var pluginsDir = path.resolve(__dirname, "../../app/plugins");
 
 if (!fs.existsSync(pluginsDir)) {
