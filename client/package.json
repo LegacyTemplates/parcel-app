@@ -7,23 +7,23 @@
     "dev": "node scripts/pre-build.js && parcel watch _layout.html -d ../app/wwwroot",
     "build": "node scripts/pre-build.js && parcel build _layout.html -d ../app/wwwroot",
     "server": "dotnet build -c Release ../server && node scripts/copy-server.js && x ../app/app.settings",
-    "dtos": "typescript-ref",
+    "dtos": "x typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@servicestack/client": "^1.0.31",
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
-    "tslib": "^1.10.0"
+    "@servicestack/client": "^1.0.32",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel-plugin-static-files-copy": "^2.2.1",
-    "typescript": "^3.5.3"
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "typescript": "^3.9.5"
   },
   "staticFiles": {
     "staticPath": "public",
     "watcherGlob": "**"
-  }  
+  }
 }
