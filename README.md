@@ -8,7 +8,7 @@
 
     $ dotnet tool install -g x
 
-    $ x new parcel-app ProjectName
+    $ x new LegacyTemplates/parcel-app ProjectName
 
 ## About
 
